@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+:root {
+  --primary: #ffffff;
+  --secondary: #f6f6f6;
+  --tertiary: #e1e2e3;
+  --quaternary: #f1ebf7;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--secondary);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-rendering: optimizeSpeed;
+}
+
+/* 
+HEADER 
+*/
+
+header {
+  background: var(--primary);
+  color: #363539;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  border-bottom: 1px solid (var(--tertiary));
+  height: 60px;
+  align-items: center;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row;
+  align-items: center;
+  margin-left: 18px;
+}
+
+nav button {
+  margin-left: 36px;
+}
+
+.alltool,
+.languages {
+  display: flex;
+}
+
+.icon-dropdown {
+  margin-left: 2px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.pdf2word {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pdf2word__text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: #1d1c21;
+}
+
+.pdf2word__icon {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 36px;
+  height: 36px;
+  flex: none;
+}
+
+.quote1,
+.dropFile__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #5f5e61;
+}
+
+.selectPDF__button {
+  size: 100%;
+  width: 368px;
+  height: 68px;
+  background: #6d18dc;
+  box-shadow: 0px 4px 8px rgba(64, 15, 127, 0.26);
+  border-radius: 8px;
+}
+
+.selectPDF__text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.dropFile__button {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12),
+    0px 4px 12px rgba(30, 33, 59, 0.16);
+  border-radius: 24px;
+}
+
+/* 
+MAIN 
+*/
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #f1ebf7;
+  padding: 32px;
+  gap: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: auto;
+}
+
+.grid .tool-box {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 24px;
+  background: white;
+  border: 0.5px solid #ededed;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.grid .tool-box .tool {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.grid .tool-box:first-child {
+  border-top-left-radius: 6px;
+}
+.grid .tool-box:last-child {
+  border-bottom-right-radius: 6px;
+}
+.grid .tool-box:nth-child(3) {
+  border-top-right-radius: 6px;
+}
+.grid .tool-box:nth-child(4) {
+  border-bottom-left-radius: 6px;
+}
+
+.howto .titel {
+  margin: 76px 0 38px 0;
+  text-align: center;
+}
+
+.howto .steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.howto .item {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  margin-bottom: 136px;
+}
+
+.features {
+  display: grid;
+  grid-template-areas:
+    "text1 image1"
+    "image2 text2"
+    "text3 image3";
+  background: white;
+}
+
+.features-text1 {
+  text-align: left;
+  margin-top: 75px;
+  grid-area: text1;
+}
+.features-text2 {
+  text-align: left;
+  margin-top: 75px;
+  grid-area: text2;
+}
+.features-text3 {
+  text-align: left;
+  margin-top: 75px;
+  grid-area: text3;
+}
+.features-image1 {
+  grid-area: image1;
+}
+.features-image2 {
+  grid-area: image2;
+}
+.features-image3 {
+  grid-area: image3;
+}
+
+.features-description {
+  margin: 40px 0px;
+}
+
+.button-convertpdf {
+  width: 142px;
+  height: 48px;
+  background: #6d18dc;
+  box-shadow: 0px 4px 8px rgba(64, 15, 127, 0.26);
+  border-radius: 8px;
+  color: white;
+}
+
+/* 
+TABLET
+*/
+
+@media screen and (max-width: 768px) {
+  .howto .steps {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .features {
+    grid-template-areas:
+      "text1"
+      "image1"
+      "text2"
+      "image2"
+      "text3"
+      "image3";
+  }
+}
+
+/* 
+PHONE
+*/
+
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid .tool-box:nth-child(2) {
+    border-top-right-radius: 6px;
+  }
+  .grid .tool-box:nth-child(3) {
+    border-top-right-radius: 0px;
+  }
+  .grid .tool-box:nth-child(4) {
+    border-bottom-left-radius: 0px;
+  }
+  .grid .tool-box:nth-child(5) {
+    border-bottom-left-radius: 6px;
+  }
+
+  .howto .steps {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
