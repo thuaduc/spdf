@@ -200,12 +200,22 @@ MAIN
 }
 
 .features {
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-box img {
+  size: 30%;
+}
+
+.features-box {
   display: grid;
   grid-template-areas:
     "text1 image1"
     "image2 text2"
     "text3 image3";
-  background: white;
 }
 
 .features-text1 {
@@ -246,6 +256,19 @@ MAIN
   color: white;
 }
 
+.whychoose-box {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+}
+
+.whychoose-item {
+  margin-bottom: 24px;
+}
+
+.whychoose-item .text {
+  margin: 12px 0px;
+}
+
 /* 
 TABLET
 */
@@ -255,7 +278,7 @@ TABLET
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .features {
+  .features-box {
     grid-template-areas:
       "text1"
       "image1"
